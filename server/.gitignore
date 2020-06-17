@@ -1,0 +1,7 @@
+node_modules/**
+data/**
+lib/**
+dist/**
+db.json
+uploads/**
+*.DS_Store

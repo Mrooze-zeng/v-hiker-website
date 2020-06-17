@@ -1,0 +1,13 @@
+dist/**
+node_modules/*
+database/*
+*.2019-07-15-23-51-59.tar.gz
+*.DS_Store
+*.tar.gz
+/test.sh
+
+server/node_modules/**
+server/data/**
+server/lib/**
+server/db.json
+server/uploads/**

@@ -1,0 +1,84 @@
+version: "3"
+services:
+  web:
+    container_name: web
+    image: "nginx:alpine"
+    depends_on:
+      - server
+    links:
+      - server
+      - postgres
+    ports:
+      - 80:80
+      - 443:443
+    restart: on-failure
+    volumes:
+      - ./client:/usr/share/nginx/html:rw
+      - ./server/uploads:/usr/share/nginx/source:rw
+      - ./nginx/conf.d:/etc/nginx/conf.d:rw
+      - ./nginx/default/default.conf:/etc/nginx/nginx.conf:rw
+      - ./nginx/crt:/etc/nginx/crt:rw
+  server:
+    container_name: server
+    build: .
+    expose:
+      - 4000
+    links:
+      - redis
+    restart: on-failure
+    depends_on:
+      - postgres
+      - redis
+    # ports:
+    #   - 4000:4000
+    volumes:
+      - ./server:/server
+    command: yarn start
+  postgres:
+    container_name: postgresdb
+    image: "postgres:11.5-alpine"
+    ports:
+      - 5200:5432
+    expose:
+      - 5432
+    restart: on-failure
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: psw
+      POSTGRES_DB: testdb
+  mysql:
+    container_name: mysqldb
+    image: mysql
+    restart: always
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Psw123
+      MYSQL_USER: userabc
+      MYSQL_PASSWORD: Psw123
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - 3301:3306
+    expose:
+      - 3306
+
+  redis:
+    container_name: redisdb
+    image: "redis:alpine"
+    restart: on-failure
+    # ports:
+    #   - 6379:6379
+    expose:
+      - 6379
+    volumes:
+      - redisdb:/data
+volumes:
+  postgresdb:
+    driver: local
+  redisdb:
+    driver: local
+  mysql:
+    driver: local

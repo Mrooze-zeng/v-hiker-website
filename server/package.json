@@ -1,0 +1,72 @@
+{
+  "name": "v-hiker.cn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "email": "mrooze@v-hiker.cn",
+    "name": "Mrooze·Zeng",
+    "url": "https://v-hiker.cn"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.0.0",
+    "yarn": ">=1.6.0"
+  },
+  "bugs": {
+    "email": "mrooze@v-hiker.cn",
+    "url": "https://v-hiker.cn"
+  },
+  "scripts": {
+    "dev": "yarn clean && cross-env DIR=src nodemon --exec babel-node src/index.js ",
+    "build": "yarn clean && babel src -d lib --copy-files",
+    "prod": "yarn build && cross-env DIR=lib HOST=postgres node lib/index.js",
+    "preProd": "yarn build && cross-env DIR=lib node lib/index.js",
+    "start": "cross-env DIR=lib HOST=postgres MODE=prod nodemon lib/index.js",
+    "clean": "rimraf lib",
+    "migration:dev": "cross-env DIR=src  && typeorm -f src/ormconfig.js"
+  },
+  "nodemonConfig": {
+    "ignore": [],
+    "watch": [
+      "src/*",
+      "lib/*",
+      "**.graphql"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cos-nodejs-sdk-v5": "^2.5.20",
+    "express": "^4.17.1",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^1.0.0",
+    "merge-graphql-schemas": "^1.7.8",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.25.3",
+    "pg": "^8.0.3",
+    "qcloud-cos-sts": "^3.0.2",
+    "reflect-metadata": "^0.1.13",
+    "shortid": "^2.2.15",
+    "tencentcloud-sdk-nodejs": "^3.0.163",
+    "typeorm": "^0.2.24",
+    "underscore": "^1.10.2",
+    "graphql-tools": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,26 @@
+upstream webpack_server {
+    server ${LOCAL_IP}:3000;
+}
+server {
+    listen 80;
+    server_name localhost;
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+        proxy_pass http://webpack_server;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+    location = /50x.html {
+        root /usr/share/nginx/html;
+    }
+}
+server {
+    listen 8888;
+    server_name localhost;
+    root /usr/share/nginx/uploads;
+    location / {
+        index index.html index.htm;
+    }
+}
