@@ -50,7 +50,7 @@
     "shortid": "^2.2.15",
     "tencentcloud-sdk-nodejs": "^3.0.163",
     "typeorm": "^0.2.24",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "graphql-tools": "^5.0.0"
   },
   "devDependencies": {
