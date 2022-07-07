@@ -2774,7 +2774,7 @@ graphql-subscriptions@^0.5.8:
   dependencies:
     iterall "^1.2.1"
 
-graphql-tools@5.0.0:
+graphql-tools@5.0.0, graphql-tools@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/graphql-tools/download/graphql-tools-5.0.0.tgz#67281c834a0e29f458adba8018f424816fa627e9"
   integrity sha1-Zygcg0oOKfRYrbqAGPQkgW+mJ+k=
@@ -2788,7 +2788,7 @@ graphql-tools@5.0.0:
     tslib "^1.11.1"
     uuid "^7.0.3"
 
-graphql-tools@^4.0.0, graphql-tools@^4.0.5, graphql-tools@^4.0.8:
+graphql-tools@^4.0.0, graphql-tools@^4.0.5:
   version "4.0.8"
   resolved "https://registry.npm.taobao.org/graphql-tools/download/graphql-tools-4.0.8.tgz#e7fb9f0d43408fb0878ba66b522ce871bafe9d30"
   integrity sha1-5/ufDUNAj7CHi6ZrUizocbr+nTA=
@@ -3728,10 +3728,10 @@ mkdirp@^1.0.4:
   resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-1.0.4.tgz?cache=0&sync_timestamp=1587535418745&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmkdirp%2Fdownload%2Fmkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha1-PrXtYmInVteaXw4qIh3+utdcL34=
 
-moment@^2.25.3:
-  version "2.25.3"
-  resolved "https://registry.npm.taobao.org/moment/download/moment-2.25.3.tgz#252ff41319cf41e47761a1a88cab30edfe9808c0"
-  integrity sha1-JS/0ExnPQeR3YaGojKsw7f6YCMA=
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 ms@2.0.0:
   version "2.0.0"
