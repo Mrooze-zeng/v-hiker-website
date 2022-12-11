@@ -2774,7 +2774,7 @@ graphql-subscriptions@^0.5.8:
   dependencies:
     iterall "^1.2.1"
 
-graphql-tools@5.0.0:
+graphql-tools@5.0.0, graphql-tools@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/graphql-tools/download/graphql-tools-5.0.0.tgz#67281c834a0e29f458adba8018f424816fa627e9"
   integrity sha1-Zygcg0oOKfRYrbqAGPQkgW+mJ+k=
@@ -2788,7 +2788,7 @@ graphql-tools@5.0.0:
     tslib "^1.11.1"
     uuid "^7.0.3"
 
-graphql-tools@^4.0.0, graphql-tools@^4.0.5, graphql-tools@^4.0.8:
+graphql-tools@^4.0.0, graphql-tools@^4.0.5:
   version "4.0.8"
   resolved "https://registry.npm.taobao.org/graphql-tools/download/graphql-tools-4.0.8.tgz#e7fb9f0d43408fb0878ba66b522ce871bafe9d30"
   integrity sha1-5/ufDUNAj7CHi6ZrUizocbr+nTA=
@@ -4332,9 +4332,9 @@ qs@6.7.0:
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz?cache=0&sync_timestamp=1588542788766&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 range-parser@~1.2.1:
   version "1.2.1"
